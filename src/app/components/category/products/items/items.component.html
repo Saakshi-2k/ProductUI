@@ -2,9 +2,14 @@
   <div class="pitem">
     <div>
       <img
-        style="height: 200px; width: 200px"
-        src="https://th.bing.com/th/id/OIP.f_oKeWEB86sMjkkgmbWMIwHaHa?w=207&h=207&c=7&o=5&dpr=1.25&pid=1.7"
+        style="height: 200px; width: 300px"
+        [src]="productItem.imageUrl"
       />
+      <div>
+        <span>
+          <h3>{{productItem.name}}</h3>
+        </span>
+      </div>
       <div>
           <span>
               <label>
@@ -16,15 +21,12 @@
     </div>
 
     <div class="pitem">
-        <ul>
-          <li>4 GB RAM | 64 GB ROM | Expandable Upto 512 GB</li>
-          <li>16.59 cm (6.53 inch) Full HD+ Display</li>
-          <li>13MP + 8MP + 5MP + 2MP | 8MP Front Camera</li>
-          <li>5020 mAh Battery</li>
-          <li>MediaTek Helio G80 Processor</li>
-        </ul>
-        <br>
-        <h3>{{ 12000 | currency: "INR" }}</h3>
+        <div>
+          <ul>
+            <li>{{productItem.description}}</li>
+          </ul>
+          <span><h3>{{ productItem.price | currency: "INR" }}</h3></span>
+        </div>
     </div>
   </div>
 </div>

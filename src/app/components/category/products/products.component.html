@@ -1,5 +1,5 @@
 <div class="row">
-    <div *ngFor="let bn of [1,2,3]">
-        <app-items></app-items>
+    <div *ngFor="let prod of productList">
+        <app-items [productItem]="prod"></app-items>
         </div>
 </div>
