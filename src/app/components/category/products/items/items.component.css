@@ -1,0 +1,15 @@
+.col{
+    height: 200px;
+}
+
+.pitem{
+    display: flex;
+    padding: auto;
+    margin: 5px;
+}
+
+.row{
+    display: flex;
+    margin: 5px;
+    border: solid;
+}

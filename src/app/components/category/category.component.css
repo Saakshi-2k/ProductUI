@@ -1,0 +1,26 @@
+.container{
+    width: 100%;
+    padding: 5px;
+}
+
+.column1{
+    text-align: center;
+    padding: auto;
+    margin: 5px;
+    width: fit-content;
+    float: left;
+    width: 20%;
+}
+
+.row{
+    border: black solid;
+    padding: auto;
+    margin: 5px;
+}
+.column2{
+    width: fit-content;
+    padding: auto;
+    margin: 5px;
+    float: left;
+    width: 75%;
+}
