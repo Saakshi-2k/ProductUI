@@ -1,26 +1,27 @@
 .container{
     width: 100%;
     padding: 5px;
+    background-color: bisque;
+    display: flex;
 }
 
 .column1{
     text-align: center;
     padding: auto;
     margin: 5px;
-    width: fit-content;
-    float: left;
-    width: 20%;
+    width: 15%; 
 }
 
 .row{
     border: black solid 1px;
     padding: auto;
     margin: 5px;
+    background-color: rgb(230, 225, 225);
+    text-align: center;
 }
 .column2{
-    width: fit-content;
     padding: auto;
     margin: 5px;
     float: left;
-    width: 75%;
+    width: 80%;
 }

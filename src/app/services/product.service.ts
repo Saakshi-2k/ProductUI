@@ -26,9 +26,9 @@ export class ProductService {
     ); //url
   }
 
-  sortProduct(sname: string, sprice: number) {
+  sortProduct(value: string, order: number) {
     return this.httpClient.get<Product[]>(
-      this.baseUrl + '//' + sname + '/' + sprice
+      this.baseUrl + '//' + value + '/' + order
     ); //url
   }
 }

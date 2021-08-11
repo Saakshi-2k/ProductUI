@@ -1,9 +1,20 @@
-<h5>Sort By Name:</h5>
-<form>
-    <div *ngFor="let sort of [1,2,3]">
-        <p>
-            <input type="radio" id="rb1"/>
-            <label for="rb1">BrandName</label>
-        </p>
-    </div>
-</form>
+<h4>Sort</h4>
+<div>
+    <input type="radio">Ascending
+    <input type="radio">Descending
+  <button
+    type="button"
+    class="btn1"
+    (click)="onNameSortClick()"
+  >
+    Brand
+  </button>
+  <br />
+  <button
+    type="button"
+    class="btn1"
+    (click)="onPriceSortClick()"
+  >
+    Price
+  </button>
+</div>

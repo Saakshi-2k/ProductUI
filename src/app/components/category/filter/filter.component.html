@@ -1,9 +1,23 @@
-<h5>Filter by Brand Name:</h5>
-<form>
+<div>
+  <h4>Filter by Brand Name:</h4>
+<div>
+  <input class="iblock" type="text" placeholder="Enter Brand Name" [(ngModel)]="pCat" />
+  <button class="btn" (click)="onFilterCatClick()">Apply Filter</button>
+</div>
+
+<h4>Filter by Price Range:</h4>
+<div>
+  <input class="iblock" type="number" placeholder="Enter Lower Range" [(ngModel)]="pLower" />
+  <input class="iblock" type="number" placeholder="Enter Upper Range" [(ngModel)]="pUpper" />
+  <button class="btn" (click)="onFilterCatClick()">Apply Filter</button>
+</div>
+</div>
+
+<!-- <form>
     <div *ngFor="let bn of [1,2,3]">
         <p>
             <input type="checkbox" id="cb1"/>
             <label for="cb1">BrandName</label>
         </p>
     </div>
-</form>
+</form> -->

@@ -8,6 +8,8 @@ import { ProductsComponent } from './components/category/products/products.compo
 import { SortComponent } from './components/category/sort/sort.component';
 import { ItemsComponent } from './components/category/products/items/items.component';
 import { CategoryComponent } from './components/category/category.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,10 @@ import { CategoryComponent } from './components/category/category.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
