@@ -1,7 +1,3 @@
-.col{
-    height: 200px;
-}
-
 .pitem{
     display: flex;
     padding: auto;
@@ -9,7 +5,12 @@
 }
 
 .row{
-    display: flex;
+    width: 100%;
     margin: 5px;
-    border: solid;
+    border: solid 1px;
+}
+
+.pdesc{
+    width: 100%;
+    padding: 1px;
 }

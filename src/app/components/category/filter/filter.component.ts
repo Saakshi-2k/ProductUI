@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from 'src/app/product';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-filter',
@@ -7,9 +9,44 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FilterComponent implements OnInit {
 
-  constructor() { }
+  prod:Product;
+  products=[];
+  pCat:string='';
+  pLower: number=0;
+  pUpper:number=0;
+  constructor(private prodService:ProductService) {
+    this.prod=new Product;
+   }
 
   ngOnInit(): void {
+  }
+
+  onFilterCatClick(){
+    if(this.pCat==""){
+      alert("Select to filter category");
+    }
+    else{
+      this.products=[]
+      this.prodService.findProductByCategory(this.pCat).subscribe((
+        data:Product[])=> 
+        {console.log(data);
+        this.products=[]});
+    }
+    
+  }
+
+  onFilterPriceClick(){
+    if(this.pLower==0 && this.pUpper==0){
+      alert("Select to filter category");
+    }
+    else{
+      this.products=[]
+      this.prodService.findProductByPrice(this.pLower,this.pUpper).subscribe((
+        data:Product[])=> 
+        {console.log(data);
+        this.products=[]});
+    }
+    
   }
 
 }

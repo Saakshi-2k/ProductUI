@@ -1,32 +1,41 @@
+<h1>Item component</h1>
 <div class="row">
   <div class="pitem">
-    <div>
+    <div >
       <img
         style="height: 200px; width: 300px"
-        [src]="productItem.imageUrl"
+        [alt]="productItem.name"
       />
-      <div>
+
+      <div style="background-color: rgb(236, 231, 223);">
         <span>
-          <h3>{{productItem.name}}</h3>
+          <label>
+            <input type="checkbox" />
+          </label>
         </span>
-      </div>
-      <div>
-          <span>
-              <label>
-                  <input type="checkbox">
-              </label>
-          </span>
-          <span>Add to compare</span>
+        <span>Add to compare</span>
       </div>
     </div>
 
-    <div class="pitem">
-        <div>
-          <ul>
-            <li>{{productItem.description}}</li>
-          </ul>
-          <span><h3>{{ productItem.price | currency: "INR" }}</h3></span>
+    <div class="row">
+      <a routerLink="/">
+        <!--redirects to the product description page-->
+        <div class="pdesc">
+          <span>
+            <h3>{{ productItem.name }}</h3>
+          </span>
         </div>
+      </a>
+      <div class="pdesc">
+        <ul>
+          <li>{{ productItem.description }}</li>
+        </ul>
+      </div>
+      <div class="pdesc">
+        <span
+          ><h3>{{ productItem.price | currency: "INR" }}</h3></span
+        >
+      </div>
     </div>
   </div>
 </div>

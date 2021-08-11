@@ -13,7 +13,7 @@
 }
 
 .row{
-    border: black solid;
+    border: black solid 1px;
     padding: auto;
     margin: 5px;
 }
