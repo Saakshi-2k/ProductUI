@@ -1,8 +1,9 @@
 export class Product {
-    id:number | undefined;
+    prodid:number | undefined;
     name:string | undefined;
     description:string | undefined;
-    price:number | undefined;
+    price:number=0;
+    category:string | undefined;
    
 
     

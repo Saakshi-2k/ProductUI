@@ -10,25 +10,23 @@ export class ProductService {
 
   products: Product[] = [];
 
-  baseUrl: string = 'http://localhost:9798//categoryRest/api';
+  baseUrl: string = 'http://localhost:9798//categoryRest/api/';
 
   constructor(private httpClient: HttpClient) {}
 
-  // getAllProducts(id: number) {
-  //   return this.httpClient.get<Product[]>(this.baseUrl);
-  // }
-  findProductByCategory(category: string) {
-    return this.httpClient.get<Product[]>(this.baseUrl + '//' + category); //url
+  findByCategory(category: string) {
+    return this.httpClient.get<Product[]>(
+      this.baseUrl + '/findByCategory/' + category
+      ); //url
   }
   findProductByPrice(lower: number, upper: number) {
     return this.httpClient.get<Product[]>(
-      this.baseUrl + '//' + lower + '/' + upper
+      this.baseUrl + '/findProductByPrice/' + lower + '/' + upper
     ); //url
   }
-
   sortProduct(value: string, order: number) {
     return this.httpClient.get<Product[]>(
-      this.baseUrl + '//' + value + '/' + order
+      this.baseUrl + '/sortProduct/' + value + '/' + order
     ); //url
   }
 }

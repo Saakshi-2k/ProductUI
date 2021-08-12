@@ -1,13 +1,65 @@
 <div class="container">
-    <div class="column1">
-        <div class="row">
-            <app-sort></app-sort>
-        </div>
-        <div class="row">
-            <app-filter></app-filter>
-        </div>
+  <div class="column1">
+    <!-- Sort asc and desc-->
+    <div class="catrow">
+      <p style="font-weight: 600">Sort</p>
+      <div>
+        <input type="radio" id="radioasc" name="sort" value="asc" />Ascending
+        <br />
+        <input type="radio" id="radiodesc" name="sort" value="desc" />Descending
+        <br />
+        <button type="button" class="btn1" (click)="onPriceSortClick()">
+          Price
+        </button>
+        <br />
+      </div>
     </div>
-    <div class="column2">
-        <app-products></app-products>
+    <!-- filter price and category-->
+    <div class="catrow">
+      <div>
+        <h4>Filter by Brand Name:</h4>
+        <div>
+          <input class="iblock" type="text" placeholder="Enter Brand Name" [(ngModel)]="pCat"/>
+          <button class="btn" (click)="onFilterCatClick()">Apply Filter</button>
+        </div>
+
+        <h4>Filter by Price Range:</h4>
+        <div>
+          <input class="iblock" type="number" placeholder="Enter Lower Range" [(ngModel)]="pLower"/><br/>
+          <input class="iblock" type="number"  placeholder="Enter Upper Range" [(ngModel)]="pUpper"/><br/>
+          <button class="btn" (click)="onFilterPriceClick()">
+            Apply Filter
+          </button>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class="column2">
+    <div class="row">
+      <!-- item-products-->
+  <div class="itemrow" *ngFor="let p of products">
+    <div class="pitem">
+      <div>
+        <img style="height: 300px; width: 300px" src="img" alt="productimage" />
+        <div style="background-color: rgb(236, 231, 223)">
+          <span><label><input type="checkbox" name="compare"/> </label></span>
+          <span>Add to compare</span>
+        </div>
+      </div>
+    </div>
+    <div class="pitem">
+      <!--redirects to the product description page-->
+      <div class="pdesc">
+        <span><p>{{p.name}}</p></span>
+        <span><p>{{p.description}}</p></span>
+        <span><p>{{p.price | currency: "INR"}}</p></span>
+        <button class="button">View Product</button>
+      </div>
+    </div>
+  </div>
+  
+  </div>
+  
+  </div>
 </div>
