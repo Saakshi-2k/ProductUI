@@ -46,7 +46,8 @@ export class CategoryComponent implements OnInit {
     if (this.pCat == '') {
       alert('Enter values to filter category');
     } else {
-      this.prodService.findByCategory(this.pCat).subscribe((data) => {
+      this.prodService
+      .findByCategory(this.pCat).subscribe((data) => {
         console.log(data);
         this.products = data as Product[];
       });
