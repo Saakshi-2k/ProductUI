@@ -11,8 +11,14 @@
 
         <h4>Filter by Brand Name:</h4>
         <div>
-          <input class="iblock" type="text" placeholder="Enter Brand Name" [(ngModel)]="pCat"/>
-          <button class="btn" (click)="onFilterCatClick()">Apply Filter</button>
+          <input class="iblock" type="text" placeholder="Enter Brand Name" [(ngModel)]="pBrand"/>
+          <button class="btn" (click)="onFilterBrandClick()">Apply Filter</button>
+        </div>
+
+        <!-- filter price, brand-names and category using checkboxes -->
+        <div class="bname" *ngFor="let catg of products">
+          <span><label><input type="checkbox" name="catg"/> </label></span>
+          <span>Smartphones</span>
         </div>
 
         <h4>Filter by Price Range:</h4>
@@ -26,19 +32,13 @@
       </div>
     </div>
 
-    <!-- filter price, brand-names and category using checkboxes -->
-    <!-- <div *ngFor="let catg of products">
-      <input type="checkbox" name="categ" [value]="catg" (change)="onChange($event)"
-       [(ngModel)]="catg.checked">{{catg.category}}
-    </div> -->
-
     <!-- Sort asc and desc-->
     <div class="catrow">
       <p style="font-weight: 600">Sort by Price</p>
       <div>
         <span>
-          <button type="button" class="btn1" name="sort" value="asc" (click)="onPriceSortClick()">Ascending</button>
-          <button type="button" class="btn1" name="sort" value="desc" (click)="onPriceSortClick()">Descending</button>
+          <button type="button" class="btn1" name="sort" value="asc" (click)="onPriceSortClickAsc()">Ascending</button>
+          <button type="button" class="btn1" name="sort" value="desc" (click)="onPriceSortClickDes()">Descending</button>
         </span> 
       </div>
     </div>

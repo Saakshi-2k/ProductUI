@@ -19,6 +19,13 @@ export class ProductService {
       this.baseUrl + '/findByCategory/' + category
       ); //url
   }
+  
+  findByName(name: string) {
+    return this.httpClient.get<Product[]>(
+      this.baseUrl + '/findByName/' + name
+      ); //url
+  }
+
   findProductByPrice(lower: number, upper: number) {
     return this.httpClient.get<Product[]>(
       this.baseUrl + '/findProductByPrice/' + lower + '/' + upper
