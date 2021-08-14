@@ -1,0 +1,39 @@
+<!-- <p>profile works!</p> -->
+<div class="header"><h2>HEADER</h2></div>
+<div class="adprof"><h3>ADMIN' PROFILE</h3></div>
+
+<!-- Displays the admin's profile  -->
+<div class="rb">
+  <span>
+    <button type="button" class="retbtn" (click)="addNewRetailer()">Add Retailer</button>
+    <button type="button" class="retbtn" (click)="showAllRetailer()">Show All</button>
+  </span>
+</div>
+
+<!-- Retailer's Detail Table -->
+<div>
+  <table>
+    <thead>
+      <tr class="trhead">
+        <td>Retailer's Id</td>
+        <td>Retailer's Name</td>
+        <td>Edit Product</td>
+        <td>To Verify</td>
+        <td>Delete</td>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let det of retArray">
+        <td>{{ det.retid }}</td>
+        <td>{{ det.retname }}</td>
+        <td>It must be a product</td>
+        <td><button type="button" class="verbtn">Verify</button></td>
+        <td><button type="button" class="delbtn" (click)="deleteRow()">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br />
+
+

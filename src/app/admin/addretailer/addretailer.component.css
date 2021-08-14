@@ -1,0 +1,38 @@
+.adprof {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 1px;
+  text-align: center;
+  margin: 5px 0;
+}
+
+/* ADD RETAILER CSS part */
+.addret {
+  width: 600px;
+  height: 100vh;
+  margin: auto;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+form label {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 17px;
+}
+
+form input {
+  width: 100%;
+  height: 2rem;
+  border: 1px solid #808080;
+}
+
+.submitbtn {
+  width: 100%;
+  padding: 10px;
+  margin: 20px 2px;
+  background-color: #3131df;
+  color: #ffffff;
+  font-weight: bold;
+}

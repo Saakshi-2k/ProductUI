@@ -7,7 +7,6 @@ import { Product } from '../product';
 })
 export class ProductService {
   //populate products from api here
-
   products: Product[] = [];
 
   baseUrl: string = 'http://localhost:9798//categoryRest/api/';

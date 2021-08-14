@@ -1,0 +1,67 @@
+.header {
+  background-color: #32e6f0;
+  color: #ffffff;
+  padding: 1px;
+  text-align: center;
+  margin: 1px 0;
+}
+/* admin profile css */
+.adprof {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 1px;
+  text-align: center;
+  margin: 5px 0;
+}
+
+.rb {
+  padding: 20px;
+}
+
+/* admin profile table css */
+.retbtn {
+  padding: 8px;
+  background-color: #3131df;
+  color: #ffffff;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+table {
+  border: 1px;
+  width: 100%;
+}
+
+td {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.trhead {
+  background-color: #696969;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+}
+tr:nth-child(even) {
+  background-color: #dfdede;
+}
+
+.verbtn{
+  background-color: #3cc814;
+  color: #ffffff;
+  padding: 5px;
+  border: none;
+  display: block;
+  margin: auto;
+}
+
+.delbtn {
+  background-color: #ff0000;
+  color: #ffffff;
+  padding: 5px;
+  border: none;
+  display: block;
+  margin: auto;
+}
+

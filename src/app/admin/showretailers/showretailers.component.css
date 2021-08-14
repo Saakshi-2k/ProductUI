@@ -1,0 +1,27 @@
+.adprof {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 1px;
+  text-align: center;
+  margin: 5px 0;
+}
+
+table {
+  border: 1px;
+  width: 100%;
+}
+
+td {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.trhead {
+  background-color: #696969;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+}
+tr:nth-child(even) {
+  background-color: #dfdede;
+}

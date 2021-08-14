@@ -22,7 +22,6 @@ export class CategoryComponent implements OnInit {
 
   //item-product
   @Input()
-  productList: Product[] = [];
   prod: any;
   products = new Array<Product>();
 
