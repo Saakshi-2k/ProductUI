@@ -6,16 +6,17 @@ import { AdminService } from 'src/app/services1/admin.service';
 @Component({
   selector: 'app-showretailers',
   templateUrl: './showretailers.component.html',
-  styleUrls: ['./showretailers.component.css']
+  styleUrls: ['./showretailers.component.css'],
 })
 export class ShowretailersComponent implements OnInit {
-
   constructor(
     private adminService: AdminService,
     private router: Router,
     private route: ActivatedRoute
-  ) { }
+  ) {}
 
+  // doubt: i wanted to add here the array which will have new data which is added 
+  // on submitting add retailer form
   retArray = new Array<Admin>();
 
   ngOnInit(): void {
@@ -29,5 +30,4 @@ export class ShowretailersComponent implements OnInit {
       this.retArray = data;
     });
   }
-
 }

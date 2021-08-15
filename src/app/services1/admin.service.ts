@@ -11,7 +11,17 @@ export class AdminService {
 
   constructor(private httpClient: HttpClient) {}
 
+  //show all the retailers entry
   showAllRetailers() {
-    return this.httpClient.get<Admin[]>(this.baseUrl + '/showRetailers/'); //url
+    return this.httpClient.get<Admin[]>(this.baseUrl + '/showRetailers/');
+  }
+
+  addRetailers(retailer:Admin){
+    return this.httpClient.post<Admin[]>(this.baseUrl+ '/addRetailers/',retailer);
+  }
+
+  //to delete retailer row
+  deleteRetailer(rid:number){
+    return this.httpClient.delete<Admin[]>(this.baseUrl+ '/adminProfile/'+rid);
   }
 }

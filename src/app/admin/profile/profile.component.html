@@ -28,8 +28,8 @@
         <td>{{ det.retid }}</td>
         <td>{{ det.retname }}</td>
         <td>It must be a product</td>
-        <td><button type="button" class="verbtn">Verify</button></td>
-        <td><button type="button" class="delbtn" (click)="deleteRow()">Delete</button></td>
+        <td><button type="button" class="verbtn" (click)="verifyRet()" >Verify</button></td>
+        <td><button type="button" class="delbtn" (click)="deleteRow(det.retid)">Delete</button></td>
       </tr>
     </tbody>
   </table>

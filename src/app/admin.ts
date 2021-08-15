@@ -1,5 +1,5 @@
 export class Admin {
-  retid: number | undefined;
+  retid: number =0;
   retname: string | undefined;
   retemail: string | undefined;
   retmobile: string | undefined;

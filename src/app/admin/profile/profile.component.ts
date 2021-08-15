@@ -9,6 +9,10 @@ import { AdminService } from 'src/app/services1/admin.service';
   styleUrls: ['./profile.component.css'],
 })
 export class ProfileComponent implements OnInit {
+
+  //id:number | undefined;
+  retArray = new Array<Admin>();  //getting error
+
   constructor(
     private adminService: AdminService,
     private router: Router,
@@ -19,8 +23,6 @@ export class ProfileComponent implements OnInit {
     this.getRetailers();
   }
 
-  retArray = new Array<Admin>();
-
   //call Retailer Array part--->
   private getRetailers() {
     this.adminService.showAllRetailers().subscribe((data) => {
@@ -30,8 +32,21 @@ export class ProfileComponent implements OnInit {
   }
 
   //delete the row in admins' profile
-  deleteRow() {
+  deleteRow(rid:number) {
     console.log('clicked');
+    this.adminService.deleteRetailer(rid).subscribe((data)=>
+    {
+      {console.log(data)}
+    });
+    this.router.navigateByUrl('/showRetailers');
+  }
+
+  //To verify the retailer
+  verifyRet(){
+    // console.log('verified');
+    // this.adminService.addRetailers(this.id).subscribe((data)=>{
+    //   this.showAllRetailer();
+    // })
   }
 
   //To add new retailer
