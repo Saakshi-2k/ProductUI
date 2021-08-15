@@ -1,6 +1,4 @@
 .adprof {
-  background-color: #000000;
-  color: #ffffff;
   padding: 1px;
   text-align: center;
   margin: 5px 0;
@@ -8,11 +6,17 @@
 
 /* ADD RETAILER CSS part */
 .addret {
-  width: 600px;
-  height: 100vh;
+  border: 1px solid black;
   margin: auto;
-  border-radius: 3px;
+  padding: 10px;
   box-sizing: border-box;
+  display: block;
+  width: 40%;
+
+}
+
+form{
+  border: 3px solid #dbdada;
 }
 
 form label {
@@ -22,10 +26,13 @@ form label {
   font-size: 17px;
 }
 
-form input {
+input {
   width: 100%;
-  height: 2rem;
   border: 1px solid #808080;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  box-sizing: border-box;
 }
 
 .submitbtn {

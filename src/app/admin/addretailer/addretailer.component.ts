@@ -15,8 +15,7 @@ export class AddretailerComponent implements OnInit {
   retailer:Admin = new Admin();
 
   constructor(private adminService: AdminService,
-    private router: Router,
-    private route: ActivatedRoute
+    private router: Router
     ) { }
 
   ngOnInit(): void {
@@ -36,6 +35,6 @@ export class AddretailerComponent implements OnInit {
   }
 //after saving the data navigate to admin profile for verification:
   retailersList(){
-    this.router.navigate(['adminProfile']);
+    this.router.navigate(['/adminProfile']);
   }
 }

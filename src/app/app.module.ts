@@ -7,7 +7,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './admin/profile/profile.component';
 import { AddretailerComponent } from './admin/addretailer/addretailer.component';
-import { ShowretailersComponent } from './admin/showretailers/showretailers.component';
 
 
 @NgModule({
@@ -15,8 +14,7 @@ import { ShowretailersComponent } from './admin/showretailers/showretailers.comp
     AppComponent,
     CategoryComponent,
     ProfileComponent,
-    AddretailerComponent,
-    ShowretailersComponent,
+    AddretailerComponent
   ],
   imports: [
     BrowserModule,

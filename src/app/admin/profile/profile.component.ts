@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component,  OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Admin } from 'src/app/admin';
 import { AdminService } from 'src/app/services1/admin.service';
@@ -15,8 +15,7 @@ export class ProfileComponent implements OnInit {
 
   constructor(
     private adminService: AdminService,
-    private router: Router,
-    private route: ActivatedRoute
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -38,26 +37,11 @@ export class ProfileComponent implements OnInit {
     {
       {console.log(data)}
     });
-    this.router.navigateByUrl('/showRetailers');
-  }
-
-  //To verify the retailer
-  verifyRet(){
-    // console.log('verified');
-    // this.adminService.addRetailers(this.id).subscribe((data)=>{
-    //   this.showAllRetailer();
-    // })
   }
 
   //To add new retailer
   addNewRetailer() {
     console.log('clicked');
-    this.router.navigateByUrl('/addRetailers');
-  }
-
-  //To display all the retailers' details
-  showAllRetailer() {
-    console.log('clicked');
-    this.router.navigateByUrl('/showRetailers');
+    this.router.navigate(['addRetailers']);
   }
 }
