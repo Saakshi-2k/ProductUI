@@ -6,7 +6,7 @@ import { Admin } from '../admin';
   providedIn: 'root',
 })
 export class AdminService {
-  baseUrl: string = 'http://localhost:9798/';
+  baseUrl: string = 'http://localhost:9798/categoryRest/api';
   retailers: Admin[] = [];
 
   constructor(private httpClient: HttpClient) {}
