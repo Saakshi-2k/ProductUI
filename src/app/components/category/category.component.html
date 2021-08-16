@@ -1,3 +1,11 @@
+<!-- search bar implementation -->
+<div class="search">
+  <div>
+    <input class="sblock" type="text" placeholder="Search" [(ngModel)]="pSearch"/>
+    <button class="btn" (click)="searchKeyword()">Search</button>
+  </div>
+</div>
+
 <div class="container">
   <div class="column1">
     <!-- filter price and category-->
@@ -16,10 +24,10 @@
         </div>
 
         <!-- filter price, brand-names and category using checkboxes -->
-        <div class="bname" *ngFor="let catg of products">
+        <!-- <div class="bname" *ngFor="let catg of products">
           <span><label><input type="checkbox" name="catg"/> </label></span>
           <span>Smartphones</span>
-        </div>
+        </div> -->
 
         <h4>Filter by Price Range:</h4>
         <div>

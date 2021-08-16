@@ -9,9 +9,15 @@ export class ProductService {
   //populate products from api here
   products: Product[] = [];
 
-  baseUrl: string = 'http://localhost:9798//categoryRest/api/';
+  baseUrl: string = 'http://localhost:9798/categoryRest/api';
 
   constructor(private httpClient: HttpClient) {}
+
+  getProductBySearch(psearch:string){
+    return this.httpClient.get<Product[]>(
+      this.baseUrl + '/getProductBySearch/' + psearch
+      );//url
+  }
 
   findByCategory(category: string) {
     return this.httpClient.get<Product[]>(

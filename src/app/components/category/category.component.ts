@@ -9,6 +9,10 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./category.component.css'],
 })
 export class CategoryComponent implements OnInit {
+  
+  //search
+  pSearch: string='';
+
   //sort
   sFlag: number = -1;
   asc: boolean = true;
@@ -40,6 +44,25 @@ export class CategoryComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  //search by keyword
+  searchKeyword(){
+    console.log('clicked');
+    if(this.pSearch==''){
+      alert('Enter keyword to search');
+    }
+    else {
+      this.prodService
+      .getProductBySearch(this.pSearch).subscribe((data) => {
+        console.log(data);
+        this.products = data as Product[];
+      });
+      // let data: any = this.products;
+      // this.router.navigate(['showItem'], {
+      //   queryParams: { data: JSON.stringify(data) },
+      // });
+  }
+}
+
   //filter category
   onFilterCatClick() {
     console.log('clicked');
@@ -51,10 +74,10 @@ export class CategoryComponent implements OnInit {
         console.log(data);
         this.products = data as Product[];
       });
-      let data: any = this.products;
-      this.router.navigate(['showItem'], {
-        queryParams: { data: JSON.stringify(data) },
-      });
+      // let data: any = this.products;
+      // this.router.navigate(['showItem'], {
+      //   queryParams: { data: JSON.stringify(data) },
+      // });
     }
   }
 
@@ -69,10 +92,10 @@ export class CategoryComponent implements OnInit {
         console.log(data);
         this.products = data as Product[];
       });
-      let data: any = this.products;
-      this.router.navigate(['showItem'], {
-        queryParams: { data: JSON.stringify(data) },
-      });
+      // let data: any = this.products;
+      // this.router.navigate(['showItem'], {
+      //   queryParams: { data: JSON.stringify(data) },
+      // });
     }
   }
 
@@ -88,10 +111,10 @@ export class CategoryComponent implements OnInit {
           console.log(data);
           this.products = data as Product[];
         });
-      let data: any = this.products;
-      this.router.navigate(['showItem'], {
-        queryParams: { data: JSON.stringify(data) },
-      });
+      // let data: any = this.products;
+      // this.router.navigate(['showItem'], {
+      //   queryParams: { data: JSON.stringify(data) },
+      // });
     }
   }
 
